@@ -1,1 +1,1 @@
-# Unholy-JavaScript
+# Coder's Workshop - Structured JS
