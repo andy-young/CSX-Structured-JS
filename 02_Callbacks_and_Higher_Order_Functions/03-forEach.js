@@ -16,15 +16,14 @@ Now let's rebuild map from challenge 1. This time instead of using a for loop, y
 
 */
 function forEach(arr, callback) {
-  const result = [];
   for (let i = 0; i < arr.length; i++) {
-    result.push(callback(arr[i]));
+    callback(arr[i]);
   }
-  return result
 }
 
 function map(arr, callback) {
-  return forEach(arr, callback);
+  forEach(arr, () => arr.push(callback(arr.shift())));
+  return arr;
 }
 
 console.log(typeof forEach); // should log: 'function'
