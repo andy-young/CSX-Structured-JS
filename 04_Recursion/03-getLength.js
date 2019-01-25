@@ -1,14 +1,18 @@
 function getLength(arr, i = 0) {
-    if (arr.indexOf(undefined) > -1 || arr[0] || arr[0] !== arr[0]) {
-			arr.pop();
-      return getLength(arr, ++i);
-    } else return i;
+  let a = [...arr], v;
+  if (a[0] !== v || a.indexOf(v) > -1) {
+    a.pop();
+    return getLength(a, ++i);
+  } else return i;
 }
 
 console.log(getLength([1])); // -> 1
 console.log(getLength([1, 2])); // -> 2
 console.log(getLength([1, 2, 3, 4, 5])); // -> 5
 console.log(getLength([])); // -> 0
+console.log(getLength([,,,,])); // -> 4 x empty
+console.log(getLength([null])); // -> 1
+console.log(getLength([null, null]))  // -> 2
 console.log(getLength([NaN])) // -> 1
 console.log(getLength([NaN, NaN, NaN])) // -> 3
 console.log(getLength([undefined])); // -> 1
