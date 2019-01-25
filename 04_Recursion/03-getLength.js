@@ -6,6 +6,8 @@ function getLength(arr, i = 0) {
   } else return i;
 }
 
+console.log(getLength([""])); // 1
+console.log(getLength(["", ""])); // 2
 console.log(getLength([1])); // -> 1
 console.log(getLength([1, 2])); // -> 2
 console.log(getLength([1, 2, 3, 4, 5])); // -> 5
