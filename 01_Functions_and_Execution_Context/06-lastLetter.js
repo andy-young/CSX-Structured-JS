@@ -2,6 +2,10 @@
 
 // Hint- Remember that each character/letter in a string has an index position that you can access with brackets- '[]'
 
+const lastLetter = word => word[word.length - 1];
+
+// or
+
 function lastLetter(word) {
 	return word[word.length - 1]
 }
