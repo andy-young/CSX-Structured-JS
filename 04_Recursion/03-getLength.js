@@ -1,6 +1,15 @@
+// Create recursive fxn that returns it's arguments length without using native .length method.
+
+// What's my base-case? (How can I ensure the recursion will fail?)
+
+// default parameter counter
+
+// edge-cases?
+
+
 function getLength(arr, i = 0) {
-  let a = [...arr], v;
-  if (a[0] !== v || a.indexOf(v) > -1) {
+  let a = [...arr];
+  if (a[0] !== undefined || a.indexOf() > -1) {
     a.pop();
     return getLength(a, ++i);
   } else return i;
